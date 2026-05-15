@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rorayhomebased.co.tz/sitemap.xml
