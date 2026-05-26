@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import SectionHeader from '../ui/SectionHeader';
@@ -12,48 +11,8 @@ const fadeUp: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: 'easeOut' as const } },
 };
 
-function useCountUp(target: number, duration: number, triggered: boolean): number {
-  const [value, setValue] = useState(0);
-
-  useEffect(() => {
-    if (!triggered) return;
-    const startTime = performance.now();
-    const tick = (now: number) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setValue(Math.round(eased * target));
-      if (progress < 1) requestAnimationFrame(tick);
-    };
-    requestAnimationFrame(tick);
-  }, [triggered, target, duration]);
-
-  return value;
-}
-
 export default function AboutPreview() {
   const t = useTranslations('about');
-  const statsRef = useRef<HTMLDivElement>(null);
-  const [hasTriggered, setHasTriggered] = useState(false);
-
-  useEffect(() => {
-    const el = statsRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHasTriggered(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
-  const staffCount = useCountUp(15, 1200, hasTriggered);
-  const hourCount = useCountUp(24, 1200, hasTriggered);
 
   return (
     <section className="bg-white section-pad">
@@ -75,24 +34,39 @@ export default function AboutPreview() {
               We understand that recovering or managing health conditions in a hospital environment can be stressful. By bringing skilled nursing, expert physiotherapy, and compassionate care directly to your doorstep, we promote faster healing, ensure dignity, and keep families together.
             </p>
 
-            <div
-              ref={statsRef}
-              className="grid grid-cols-2 gap-8 mb-10 border-t border-gray-100 pt-8"
-            >
-              <div>
-                <p className="font-display text-4xl font-bold text-navy-deep mb-2">
-                  {staffCount}+
-                </p>
-                <p className="text-sm font-bold text-roray-green tracking-wider uppercase">
-                  {t('stat_staff')}
+            {/* Mission / Vision / Values */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-gray-200 border border-gray-200 mb-10">
+              <div className="bg-white p-6">
+                <div className="w-10 h-10 bg-roray-green flex items-center justify-center mb-4 no-radius">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" />
+                  </svg>
+                </div>
+                <h3 className="font-display font-bold text-navy text-xs uppercase tracking-wider mb-2">Our Mission</h3>
+                <p className="text-ink-soft text-sm leading-relaxed">
+                  Accessible, compassionate home healthcare that improves patient wellbeing and quality of life.
                 </p>
               </div>
-              <div>
-                <p className="font-display text-4xl font-bold text-navy-deep mb-2">
-                  {hourCount}/7
+              <div className="bg-white p-6">
+                <div className="w-10 h-10 bg-accent-red flex items-center justify-center mb-4 no-radius">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" />
+                  </svg>
+                </div>
+                <h3 className="font-display font-bold text-navy text-xs uppercase tracking-wider mb-2">Our Vision</h3>
+                <p className="text-ink-soft text-sm leading-relaxed">
+                  To become the leading trusted home healthcare provider in Tanzania.
                 </p>
-                <p className="text-sm font-bold text-roray-green tracking-wider uppercase">
-                  {t('stat_availability')}
+              </div>
+              <div className="bg-white p-6">
+                <div className="w-10 h-10 bg-navy flex items-center justify-center mb-4 no-radius">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                  </svg>
+                </div>
+                <h3 className="font-display font-bold text-navy text-xs uppercase tracking-wider mb-2">Core Values</h3>
+                <p className="text-ink-soft text-sm leading-relaxed">
+                  Compassion · Professionalism · Respect · Integrity · Excellence
                 </p>
               </div>
             </div>

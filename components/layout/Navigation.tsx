@@ -9,7 +9,7 @@ import Button from '../ui/Button';
 import { IMAGES } from '@/lib/images';
 
 export default function Navigation() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations('nav');
@@ -17,7 +17,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -39,8 +39,8 @@ export default function Navigation() {
           : 'py-4'
       }`}
       style={{
-        background: isScrolled ? 'rgba(11,36,71,0.97)' : 'transparent',
-        backdropFilter: isScrolled ? 'blur(8px)' : 'none',
+        background: 'rgba(11,36,71,0.97)',
+        backdropFilter: 'blur(8px)',
       }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">

@@ -39,8 +39,11 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'MedicalBusiness'],
   name: 'Roray Homebased Medical Services Ltd',
+  description:
+    'Professional home nursing, elderly care, post-surgery recovery, and medical support services in Dodoma, Tanzania.',
   url: 'https://rorayhomebased.co.tz',
   telephone: '+255685095109',
+  email: 'info@rorayhomebased.co.tz',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Makulu',
@@ -49,6 +52,22 @@ const jsonLd = {
   },
   priceRange: '$$',
   medicalSpecialty: 'Home Healthcare',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+  ],
+  availableService: [
+    'Skilled Home Nursing',
+    'Elderly Care',
+    'Post-Surgery Recovery',
+    'Physiotherapy Support',
+    'Palliative Care',
+    'Chronic Disease Management',
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

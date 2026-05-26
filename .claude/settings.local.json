@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git config *)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\wise_gtr\\\\Downloads\\\\roray homebased\\\\roray-homebased\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "Bash(Format-Table)",
+      "Bash(cp \"New Pics/pexels-kampus-7551681.jpg\" \"public/images/pexels-kampus-7551681.jpg\")",
+      "Bash(cp \"New Pics/pexels-ai25studioai-7345456.jpg\" \"public/images/pexels-ai25studioai-7345456.jpg\")",
+      "Bash(cp \"New Pics/pexels-kampus-7551684.jpg\" \"public/images/pexels-kampus-7551684.jpg\")",
+      "Bash(cp \"New Pics/pexels-thirdman-5327862.jpg\" \"public/images/pexels-thirdman-5327862.jpg\")",
+      "Bash(cp \"New Pics/pexels-kampus-7551649.jpg\" \"public/images/pexels-kampus-7551649.jpg\")",
+      "Bash(npm install *)",
+      "Bash(node -e \"const p = require\\('./node_modules/next-intl/package.json'\\); console.log\\(p.version\\);\")",
+      "Bash(node -e \"const p = require\\('./node_modules/next-intl/package.json'\\); console.log\\(JSON.stringify\\(Object.keys\\(p.exports || {}\\), null, 2\\)\\);\")",
+      "Bash(node -e \"try { const m = require\\('./node_modules/next-intl'\\); console.log\\(Object.keys\\(m\\).join\\(', '\\)\\); } catch\\(e\\) { console.log\\('ESM only:', e.message.substring\\(0,100\\)\\); }\")",
+      "Bash(node -e \"try { const m = require\\('./node_modules/next-intl/server'\\); console.log\\(Object.keys\\(m\\).join\\(', '\\)\\); } catch\\(e\\) { console.log\\('ESM:', e.message.substring\\(0,100\\)\\); }\")",
+      "Bash(node -e \"const p = require\\('./node_modules/next-intl/package.json'\\); console.log\\(JSON.stringify\\(p.exports['./server'], null, 2\\)\\);\")",
+      "Bash(npm run *)",
+      "Bash(node -e \"const p = require\\('./node_modules/eslint-config-next/package.json'\\); console.log\\(p.version\\);\")",
+      "Bash(node -e \"const c = require\\('./node_modules/eslint-config-next/dist/core-web-vitals.js'\\); console.log\\(JSON.stringify\\(Object.keys\\(c\\), null, 2\\)\\);\")",
+      "Bash(node -e \"const c = require\\('./node_modules/eslint-config-next/dist/core-web-vitals.js'\\); const flat = Array.from\\(c\\); for\\(const r of flat\\){ if\\(r.rules\\) { const keys = Object.keys\\(r.rules\\); keys.filter\\(k=>k.includes\\('state'\\)\\).forEach\\(k=>console.log\\(k\\)\\); }}\")",
+      "Bash(git remote *)"
+    ]
+  }
+}
