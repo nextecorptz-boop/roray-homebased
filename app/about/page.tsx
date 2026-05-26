@@ -5,17 +5,17 @@ import ProcessSteps from '@/components/sections/ProcessSteps';
 import { IMAGES } from '@/lib/images';
 
 export const metadata = {
-  title: 'Our Story | Roray Homebased Medical Services',
+  title: 'About Roray Homebased Medical Services | Dodoma, Tanzania',
   description: 'Redefining healthcare delivery in Dodoma. Learn about our mission to bring clinical excellence and compassionate medical care to the comfort of your home.',
 };
 
 export default function AboutPage() {
   return (
     <>
-      <PageHero 
-        title="About Roray Homebased" 
+      <PageHero
+        title="About Roray Homebased Medical Services"
         description="Learn about our mission to redefine healthcare delivery in Dodoma."
-        imagePath={IMAGES.consultation}
+        imagePath={IMAGES.elderlyCare}
       />
       <AboutPreview />
       <WhyChooseUs />

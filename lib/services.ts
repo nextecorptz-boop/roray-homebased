@@ -1,50 +1,61 @@
+import { IMAGES } from './images';
+
 export const SERVICES = [
   {
     id: 'home-nursing',
     title: 'Skilled Home Nursing',
-    tagline: 'Clinical care, delivered at home.',
+    tagline: 'CLINICAL CARE, DELIVERED AT HOME.',
     icon: 'nursing',
     description: 'Professional nursing care for complex medical conditions, medication administration, and vital signs monitoring right in your home.',
-    href: '/services/home-nursing'
+    href: '/services/home-nursing',
+    cardImage: IMAGES.nursingCare,
   },
   {
     id: 'elderly-care',
     title: 'Elderly Care',
-    tagline: 'Dignified support for those who supported us.',
+    tagline: 'DIGNIFIED SUPPORT FOR THOSE WHO SUPPORTED US.',
     icon: 'elderly',
     description: 'Compassionate assistance with daily living activities, personal hygiene, and companionship for senior family members.',
-    href: '/services/elderly-care'
+    href: '/services/elderly-care',
+    cardImage: IMAGES.elderlyCare,
   },
   {
     id: 'post-surgery-recovery',
     title: 'Post-Surgery Recovery',
-    tagline: 'Healing happens best at home.',
+    tagline: 'HEALING HAPPENS BEST AT HOME.',
     icon: 'surgery',
     description: 'Dedicated post-operative care, wound management, and rehabilitation support to ensure a safe and smooth recovery.',
-    href: '/services/post-surgery-recovery'
+    href: '/services/post-surgery-recovery',
+    cardImage: IMAGES.postSurgery,
   },
   {
     id: 'physiotherapy',
     title: 'Physiotherapy Support',
-    tagline: 'Restoring movement, restoring independence.',
+    tagline: 'RESTORING MOVEMENT, RESTORING INDEPENDENCE.',
     icon: 'physio',
     description: 'In-home physical therapy sessions designed to improve mobility, relieve pain, and restore physical function.',
-    href: '/services/physiotherapy'
+    href: '/services/physiotherapy',
+    cardImage: IMAGES.careExplanation,
+    comingSoon: true,
   },
   {
     id: 'palliative-care',
     title: 'Palliative Care',
-    tagline: 'Comfort, dignity, and presence.',
+    tagline: 'COMFORT, DIGNITY, AND PRESENCE.',
     icon: 'palliative',
     description: 'Specialized medical care focused on providing relief from the symptoms and stress of a serious illness.',
-    href: '/services/palliative-care'
+    href: '/services/palliative-care',
+    cardImage: IMAGES.palliativeCare,
+    comingSoon: true,
   },
   {
     id: 'chronic-disease',
     title: 'Chronic Disease Management',
-    tagline: 'Long-term care, structured and steady.',
+    tagline: 'LONG-TERM CARE, STRUCTURED AND STEADY.',
     icon: 'chronic',
     description: 'Ongoing support and structured care plans for patients managing conditions like diabetes, hypertension, and asthma.',
-    href: '/services/chronic-disease'
-  }
+    href: '/services/chronic-disease',
+    cardImage: IMAGES.chronicCare,
+    comingSoon: true,
+  },
 ];

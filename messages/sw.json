@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Nyumbani",
+    "about": "Kuhusu",
+    "services": "Huduma",
+    "team": "Timu",
+    "contact": "Wasiliana",
+    "book": "Panga Mashauriano"
+  },
+  "hero": {
+    "headline": "Huduma ya Afya ya Nyumbani Dodoma",
+    "subheadline": "Huduma ya Huruma. Wataalamu Wanaostahiwa. Afya Bora.",
+    "cta_primary": "Panga Mashauriano",
+    "cta_secondary": "Jifunze Zaidi"
+  },
+  "about": {
+    "section_label": "SISI NI NANI",
+    "heading": "Kubadilisha Utoaji wa Huduma za Afya Tanzania.",
+    "body": "Ikiwa imeanzishwa Dodoma, Roray Homebased Medical Services Ltd iliundwa na lengo moja: kuziba pengo kati ya ubora wa kliniki na starehe ya nyumbani.",
+    "stat_staff": "Wafanyakazi wa Matibabu",
+    "stat_availability": "Upatikanaji wa Huduma",
+    "cta": "Jifunze Zaidi Kuhusu Sisi"
+  },
+  "services": {
+    "section_label": "TUNACHOTOA",
+    "heading": "Huduma Zetu",
+    "subheading": "Huduma za kiwango cha hospitali, zinazoletwa mlangoni mwako.",
+    "explore": "Chunguza Huduma",
+    "coming_soon": "INAKUJA HIVI KARIBUNI",
+    "nursing": {
+      "title": "Uuguzi wa Nyumbani",
+      "tagline": "HUDUMA YA KLINIKI, NYUMBANI KWAKO."
+    },
+    "elderly": {
+      "title": "Huduma kwa Wazee",
+      "tagline": "MSAADA WA HESHIMA KWA WALE WALIOTUSAIDIA."
+    },
+    "surgery": {
+      "title": "Kupona Baada ya Upasuaji",
+      "tagline": "KUPONA VIZURI ZAIDI NYUMBANI."
+    },
+    "physio": {
+      "title": "Msaada wa Fisioterapia",
+      "tagline": "KUREJESHA HARAKATI, KUREJESHA UHURU."
+    },
+    "palliative": {
+      "title": "Huduma ya Kutuliza Maumivu",
+      "tagline": "FARAJA, HESHIMA, NA UWEPO."
+    },
+    "chronic": {
+      "title": "Usimamizi wa Magonjwa Sugu",
+      "tagline": "HUDUMA YA MUDA MREFU, IMARA NA THABITI."
+    }
+  },
+  "team": {
+    "section_label": "MKURUGENZI WETU WA MATIBABU",
+    "credentials_label": "Vyeti",
+    "book_cta": "Panga Mashauriano na Dkt. Mande"
+  },
+  "contact": {
+    "heading": "Wasiliana Nasi",
+    "name": "Jina Kamili",
+    "email": "Anwani ya Barua Pepe",
+    "phone": "Nambari ya Simu",
+    "message": "Ujumbe Wako",
+    "submit": "Tuma Ujumbe",
+    "location": "Mahali",
+    "hours": "Masaa ya Kazi"
+  },
+  "footer": {
+    "tagline": "Huduma ya Huruma. Wataalamu Wanaostahiwa. Afya Bora.",
+    "rights": "Haki zote zimehifadhiwa.",
+    "nav_label": "Urambazaji",
+    "services_label": "Huduma",
+    "contact_label": "Wasiliana Nasi"
+  }
+}

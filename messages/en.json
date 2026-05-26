@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "contact": "Contact",
+    "book": "Book Consultation"
+  },
+  "hero": {
+    "headline": "Professional Home Healthcare in Dodoma",
+    "subheadline": "Compassionate Care. Trusted Professionals. Better Health.",
+    "cta_primary": "Book a Consultation",
+    "cta_secondary": "Learn More"
+  },
+  "about": {
+    "section_label": "WHO WE ARE",
+    "heading": "Redefining Healthcare Delivery in Tanzania.",
+    "body": "Founded in Dodoma, Roray Homebased Medical Services Ltd was established with a singular mission: to bridge the gap between clinical excellence and the comfort of home.",
+    "stat_staff": "Medical Staff",
+    "stat_availability": "Care Availability",
+    "cta": "Learn More About Us"
+  },
+  "services": {
+    "section_label": "WHAT WE OFFER",
+    "heading": "Our Services",
+    "subheading": "Hospital-grade care, delivered to your doorstep.",
+    "explore": "Explore Service",
+    "coming_soon": "COMING SOON",
+    "nursing": {
+      "title": "Skilled Home Nursing",
+      "tagline": "CLINICAL CARE, DELIVERED AT HOME."
+    },
+    "elderly": {
+      "title": "Elderly Care",
+      "tagline": "DIGNIFIED SUPPORT FOR THOSE WHO SUPPORTED US."
+    },
+    "surgery": {
+      "title": "Post-Surgery Recovery",
+      "tagline": "HEALING HAPPENS BEST AT HOME."
+    },
+    "physio": {
+      "title": "Physiotherapy Support",
+      "tagline": "RESTORING MOVEMENT, RESTORING INDEPENDENCE."
+    },
+    "palliative": {
+      "title": "Palliative Care",
+      "tagline": "COMFORT, DIGNITY, AND PRESENCE."
+    },
+    "chronic": {
+      "title": "Chronic Disease Management",
+      "tagline": "LONG-TERM CARE, STRUCTURED AND STEADY."
+    }
+  },
+  "team": {
+    "section_label": "OUR MEDICAL DIRECTOR",
+    "credentials_label": "Credentials",
+    "book_cta": "Book a Consultation with Dr. Mande"
+  },
+  "contact": {
+    "heading": "Get In Touch",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "location": "Location",
+    "hours": "Working Hours"
+  },
+  "footer": {
+    "tagline": "Compassionate Care. Trusted Professionals. Better Health.",
+    "rights": "All rights reserved.",
+    "nav_label": "Navigation",
+    "services_label": "Services",
+    "contact_label": "Contact Us"
+  }
+}

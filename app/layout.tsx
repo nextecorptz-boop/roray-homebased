@@ -1,42 +1,77 @@
 import type { Metadata } from 'next';
-import { Montserrat, Inter } from 'next/font/google';
+import { Montserrat, Open_Sans } from 'next/font/google';
 import './globals.css';
 import UtilityBar from '@/components/layout/UtilityBar';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
-import { SITE_INFO } from '@/lib/content';
+import { LanguageProvider } from '@/context/LanguageContext';
+import TranslationsProvider from '@/components/providers/TranslationsProvider';
+import PageTransition from '@/components/providers/PageTransition';
 
-const montserrat = Montserrat({ 
-  subsets: ['latin'], 
+const montserrat = Montserrat({
+  subsets: ['latin'],
   weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-montserrat'
+  variable: '--font-montserrat',
 });
 
-const inter = Inter({ 
+const openSans = Open_Sans({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter'
+  weight: ['300', '400', '600'],
+  variable: '--font-opensans',
 });
 
 export const metadata: Metadata = {
-  title: `${SITE_INFO.name} | Professional Home Healthcare in Dodoma`,
-  description: 'Professional home nursing, elderly care, and medical support across Dodoma, Tanzania.',
+  title: 'Roray Homebased Medical Services | Home Healthcare Dodoma, Tanzania',
+  description:
+    'Professional home nursing, elderly care, and medical support in Dodoma. Compassionate care delivered to your home by qualified medical staff.',
+  openGraph: {
+    title: 'Roray Homebased Medical Services',
+    description: 'Home healthcare delivered with clinical excellence across Dodoma.',
+    url: 'https://rorayhomebased.co.tz',
+    siteName: 'Roray Homebased Medical Services',
+    locale: 'en_TZ',
+    type: 'website',
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'MedicalBusiness'],
+  name: 'Roray Homebased Medical Services Ltd',
+  url: 'https://rorayhomebased.co.tz',
+  telephone: '+255685095109',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Makulu',
+    addressLocality: 'Dodoma',
+    addressCountry: 'TZ',
+  },
+  priceRange: '$$',
+  medicalSpecialty: 'Home Healthcare',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
-      <body className={`${montserrat.variable} ${inter.variable} font-body bg-bone-cool text-ink overflow-x-hidden antialiased`}>
-        <UtilityBar />
-        <Navigation />
-        <main>{children}</main>
-        <Footer />
-        <FloatingWhatsApp />
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body
+        className={`${montserrat.variable} ${openSans.variable} font-body bg-bone-cool text-ink overflow-x-hidden antialiased`}
+      >
+        <LanguageProvider>
+          <TranslationsProvider>
+            <UtilityBar />
+            <Navigation />
+            <PageTransition>{children}</PageTransition>
+            <Footer />
+            <FloatingWhatsApp />
+          </TranslationsProvider>
+        </LanguageProvider>
       </body>
     </html>
   );
