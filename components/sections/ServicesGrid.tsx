@@ -48,7 +48,6 @@ export default function ServicesGrid() {
             <motion.div key={service.id} variants={fadeUp}>
               <ServiceCard
                 {...service}
-                comingSoon={service.comingSoon ?? false}
               />
             </motion.div>
           ))}

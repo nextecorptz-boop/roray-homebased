@@ -1,42 +1,71 @@
-import SectionHeader from '../ui/SectionHeader';
-import PlaceholderFlag from '../ui/PlaceholderFlag';
+'use client';
+import { motion } from 'framer-motion';
+import { TESTIMONIALS } from '@/lib/testimonials';
+import { FADE_UP, STAGGER_CONTAINER } from '@/lib/animations';
+import Eyebrow from '@/components/ui/Eyebrow';
 
 export default function TestimonialsGrid() {
   return (
-    <section className="bg-bone-warm section-pad">
+    <section className="section-pad bg-bone-warm">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <SectionHeader 
-          eyebrow="Patient Stories"
-          title="Voices of Our Community."
-          centered
-          className="mb-16"
-        />
+        <motion.div
+          variants={STAGGER_CONTAINER}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
+          <motion.div variants={FADE_UP} className="flex justify-center">
+            <Eyebrow>Patient Stories</Eyebrow>
+          </motion.div>
+          <motion.h2
+            variants={FADE_UP}
+            className="font-display font-bold text-navy text-3xl md:text-5xl leading-tight mb-2"
+          >
+            Voices of Our Community.
+          </motion.h2>
+          <motion.p variants={FADE_UP} className="text-roray-green font-display text-xl">
+            Sauti za Jamii Yetu.
+          </motion.p>
+        </motion.div>
 
-        <PlaceholderFlag label="Testimonials / Patient Stories" />
-
-        <div className="grid md:grid-cols-2 gap-8 opacity-50 pointer-events-none">
-          {/* Skeleton cards for layout demonstration */}
-          {[1, 2].map((item) => (
-            <div key={item} className="bg-white border border-gray-200 no-radius p-8">
-              <div className="flex gap-1 mb-6">
-                {[1,2,3,4,5].map(star => (
-                  <svg key={star} className="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                ))}
+        <motion.div
+          variants={STAGGER_CONTAINER}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          className="grid md:grid-cols-2 gap-6"
+        >
+          {TESTIMONIALS.map((t, i) => (
+            <motion.div
+              key={i}
+              variants={FADE_UP}
+              className="bg-white border border-gray-200 border-l-4 border-l-roray-green p-8 relative no-radius"
+            >
+              {/* Language tag */}
+              <div className="absolute top-6 right-6 bg-navy text-white font-display text-[10px] font-bold tracking-[0.15em] uppercase px-2 py-1 no-radius">
+                {t.lang === 'en' ? 'EN' : 'SW'}
               </div>
-              <div className="h-4 bg-gray-200 w-full mb-3"></div>
-              <div className="h-4 bg-gray-200 w-full mb-3"></div>
-              <div className="h-4 bg-gray-200 w-2/3 mb-8"></div>
-              
-              <div className="flex items-center gap-4 border-t border-gray-100 pt-6">
-                <div className="w-12 h-12 bg-gray-200 no-radius"></div>
-                <div>
-                  <div className="h-4 bg-gray-200 w-24 mb-2"></div>
-                  <div className="h-3 bg-gray-200 w-16"></div>
+
+              {/* Quote mark */}
+              <div className="font-display text-7xl leading-none text-roray-green opacity-10 font-bold absolute top-4 left-6">
+                &ldquo;
+              </div>
+
+              <p className="text-ink text-base leading-relaxed mb-6 relative z-10 italic font-light pt-4">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+
+              <div className="pt-4 border-t border-gray-100">
+                <div className="font-display font-bold text-navy text-base">{t.name}</div>
+                <div className="text-ink-muted text-sm">{t.location}</div>
+                <div className="inline-block mt-2 bg-roray-green text-white font-display text-[10px] font-bold tracking-[0.12em] uppercase px-3 py-1 no-radius">
+                  {t.service}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

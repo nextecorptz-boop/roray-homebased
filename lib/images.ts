@@ -1,5 +1,5 @@
 export const IMAGES = {
-  // Legacy images (kept for backward compatibility)
+  // Original images
   hero: '/images/pexels-ninthgrid-2149521550-30677591.jpg',
   consultation: '/images/pexels-ninthgrid-2149521550-30677597.jpg',
   examRoom: '/images/pexels-ninthgrid-2149521550-30678208.jpg',
@@ -9,7 +9,7 @@ export const IMAGES = {
   stethoscope: '/images/pexels-anntarazevich-7904481.jpg',
   equipment: '/images/pexels-skylight-views-2151863365-33795605.jpg',
 
-  // New production images
+  // Production images (from previous batch)
   heroMain: '/images/pexels-kampus-7551681.jpg',
   heroMobile: '/images/pexels-ai25studioai-7345456.jpg',
   elderlyCare: '/images/pexels-kampus-7551684.jpg',
@@ -22,5 +22,13 @@ export const IMAGES = {
   careExplanation: '/images/pexels-ai25studioai-7345450.jpg',
   drMande: '/images/dr-mande.jpg',
 
-  logo: '/logo.png',
+  // New images (from Desktop new-pics)
+  doctorExam: '/images/new-pics/pexels-ivan-s-4989149.jpg',
+  communityWork: '/images/new-pics/pexels-lagosfoodbank-8248433.jpg',
+  emergencyBg: '/images/new-pics/pexels-roger-brown-3435524-5149759.jpg',
+  clinicalAlt: '/images/new-pics/pexels-ninthgrid-2149521550-30688589.jpg',
+
+  logo: '/images/logo-roray.png',
 } as const;
+
+export type ImageKey = keyof typeof IMAGES;

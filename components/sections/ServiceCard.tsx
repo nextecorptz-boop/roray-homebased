@@ -12,7 +12,6 @@ interface ServiceCardProps {
   description: string;
   href: string;
   cardImage?: string;
-  comingSoon?: boolean;
 }
 
 export default function ServiceCard({
@@ -22,7 +21,6 @@ export default function ServiceCard({
   description,
   href,
   cardImage,
-  comingSoon = false,
 }: ServiceCardProps) {
   const Icon = Icons[icon as IconName] || Icons.nursing;
   const t = useTranslations('services');
@@ -30,24 +28,14 @@ export default function ServiceCard({
   const cardClasses =
     'group flex flex-col h-full bg-white border border-gray-200 hover:border-l-[3px] hover:border-l-roray-green hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden no-radius';
 
-  const content = (
-    <>
+  return (
+    <Link href={href} className={cardClasses}>
       {/* Hover accent line top */}
       <div className="absolute top-0 left-0 w-full h-[2px] bg-roray-green scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-500"></div>
 
-      {/* Coming soon badge */}
-      {comingSoon && (
-        <span
-          className="absolute top-3 right-3 z-10 text-[10px] font-bold tracking-[0.1em] px-2 py-[3px] no-radius"
-          style={{ background: '#D4AF37', color: '#0B2447' }}
-        >
-          {t('coming_soon')}
-        </span>
-      )}
-
       {/* Card image */}
       {cardImage && (
-        <div className="relative h-48 w-full overflow-hidden no-radius">
+        <div className="relative h-[200px] w-full overflow-hidden no-radius">
           <Image
             src={cardImage}
             alt={title}
@@ -72,32 +60,20 @@ export default function ServiceCard({
 
         <div className="divider-pulse my-6 opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-        <p className="text-ink-soft mb-6 line-clamp-3 leading-relaxed flex-1">{description}</p>
+        <p className="text-ink-soft mb-6 sm:line-clamp-3 leading-relaxed flex-1">{description}</p>
 
-        {!comingSoon && (
-          <div className="flex items-center gap-2 text-[13px] font-bold tracking-widest uppercase text-navy group-hover:text-roray-green transition-colors mt-auto">
-            <span>{t('explore')}</span>
-            <svg
-              className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </div>
-        )}
+        <div className="flex items-center gap-2 text-[13px] font-bold tracking-widest uppercase text-navy group-hover:text-roray-green transition-colors mt-auto">
+          <span>{t('explore')}</span>
+          <svg
+            className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </div>
       </div>
-    </>
-  );
-
-  if (comingSoon) {
-    return <div className={cardClasses}>{content}</div>;
-  }
-
-  return (
-    <Link href={href} className={cardClasses}>
-      {content}
     </Link>
   );
 }

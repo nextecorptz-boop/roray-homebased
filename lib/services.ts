@@ -36,7 +36,7 @@ export const SERVICES = [
     description: 'In-home physical therapy sessions designed to improve mobility, relieve pain, and restore physical function.',
     href: '/services/physiotherapy',
     cardImage: IMAGES.careExplanation,
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'palliative-care',
@@ -46,7 +46,7 @@ export const SERVICES = [
     description: 'Specialized medical care focused on providing relief from the symptoms and stress of a serious illness.',
     href: '/services/palliative-care',
     cardImage: IMAGES.palliativeCare,
-    comingSoon: true,
+    comingSoon: false,
   },
   {
     id: 'chronic-disease',
@@ -56,6 +56,6 @@ export const SERVICES = [
     description: 'Ongoing support and structured care plans for patients managing conditions like diabetes, hypertension, and asthma.',
     href: '/services/chronic-disease',
     cardImage: IMAGES.chronicCare,
-    comingSoon: true,
+    comingSoon: false,
   },
 ];

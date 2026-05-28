@@ -58,7 +58,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.1, ease: 'easeOut' }}
-            className="font-display font-bold text-3xl md:text-5xl lg:text-6xl text-white leading-[1.1] md:leading-[1.05] tracking-tight mb-4"
+            className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] md:leading-[1.05] tracking-tight mb-4"
           >
             {t('headline')}
           </motion.h1>
@@ -76,7 +76,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.25, ease: 'easeOut' }}
-            className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed font-light"
+            className="text-lg md:text-xl text-gray-200 mb-10 max-w-[90vw] sm:max-w-2xl leading-relaxed font-light"
           >
             {t('subheadline')}
           </motion.p>
@@ -85,12 +85,12 @@ export default function Hero() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.4, ease: 'easeOut' }}
-            className="flex flex-col sm:flex-row gap-4 mb-12"
+            className="flex flex-col sm:flex-row gap-3 mb-12"
           >
-            <Button href="/book" variant="primary">
+            <Button href="/book" variant="primary" className="w-full sm:w-auto">
               {t('cta_primary')}
             </Button>
-            <Button href="/about" variant="outline" className="border-white text-white hover:bg-white hover:text-navy-deep">
+            <Button href="/about" variant="outline" className="border-white text-white hover:bg-white hover:text-navy-deep w-full sm:w-auto">
               {t('cta_secondary')}
             </Button>
           </motion.div>

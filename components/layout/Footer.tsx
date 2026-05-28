@@ -17,11 +17,10 @@ export default function Footer() {
           <Image
             src={IMAGES.logo}
             alt="Roray Homebased Medical Services"
-            width={200}
-            height={132}
+            width={160}
+            height={106}
             loading="lazy"
-            style={{ width: 'auto', height: '48px' }}
-            className="mb-6 brightness-0 invert"
+            className="mb-6 brightness-0 invert h-12 w-auto object-contain no-radius"
           />
           <p className="text-gray-300 text-sm mb-6 leading-relaxed">{t('tagline')}</p>
           <div className="flex gap-4">
@@ -69,11 +68,14 @@ export default function Footer() {
             </li>
             <li className="flex items-start gap-3 text-sm text-gray-300">
               <svg className="w-5 h-5 text-roray-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              <span>{SITE_INFO.phone}</span>
+              <div className="flex flex-col gap-1">
+                <a href={`tel:${SITE_INFO.phoneClean}`} className="hover:text-roray-greenlight transition-colors">{SITE_INFO.phone}</a>
+                <a href={`tel:${SITE_INFO.phoneSecondaryClean}`} className="hover:text-roray-greenlight transition-colors">{SITE_INFO.phoneSecondary}</a>
+              </div>
             </li>
             <li className="flex items-start gap-3 text-sm text-gray-300">
               <svg className="w-5 h-5 text-roray-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span>{SITE_INFO.email}</span>
+              <a href={`mailto:${SITE_INFO.email}`} className="hover:text-roray-greenlight transition-colors">{SITE_INFO.email}</a>
             </li>
           </ul>
         </div>

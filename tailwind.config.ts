@@ -9,14 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: { DEFAULT: '#0B2447', deep: '#061632', light: '#1A3A6B' },
-        roray: { green: '#0E8A3E', greendark: '#0A6E31', greenlight: '#1FA854' },
-        accent: { red: '#D72638', reddark: '#A81E2B' },
-        bone: { DEFAULT: '#F7F5F0', warm: '#EFEBE2', cool: '#FAFAFA' },
-        ink: { DEFAULT: '#0A0E1A', soft: '#3D4659', muted: '#6B7280' }
+        navy: { DEFAULT: '#0B2447', deep: '#0B2447', light: '#1A3A6B' },
+        roray: { green: '#2E7D4F', greendark: '#215A38', greenlight: '#3C9D63' },
+        accent: { red: '#C0392B', reddark: '#962D22' },
+        bone: { DEFAULT: '#FAF9F7', warm: '#F5F0E8', cool: '#FAF9F7' },
+        ink: { DEFAULT: '#0A0E1A', soft: '#4A5568', muted: '#6B7280' },
+        gold: { DEFAULT: '#D4AF37' }
       },
       fontFamily: {
-        display: ['var(--font-montserrat)', 'sans-serif'],
+        display: ['var(--font-cormorant)', 'serif'],
         body: ['var(--font-opensans)', 'sans-serif']
       }
     },

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Montserrat, Open_Sans } from 'next/font/google';
+import { Cormorant_Garamond, Open_Sans } from 'next/font/google';
 import './globals.css';
 import UtilityBar from '@/components/layout/UtilityBar';
 import Navigation from '@/components/layout/Navigation';
@@ -8,11 +8,14 @@ import FloatingWhatsApp from '@/components/layout/FloatingWhatsApp';
 import { LanguageProvider } from '@/context/LanguageContext';
 import TranslationsProvider from '@/components/providers/TranslationsProvider';
 import PageTransition from '@/components/providers/PageTransition';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
-const montserrat = Montserrat({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-montserrat',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
 });
 
 const openSans = Open_Sans({
@@ -39,8 +42,11 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'MedicalBusiness'],
   name: 'Roray Homebased Medical Services Ltd',
+  description:
+    'Professional home nursing, elderly care, post-surgery recovery, and medical support services in Dodoma, Tanzania.',
   url: 'https://rorayhomebased.co.tz',
   telephone: '+255685095109',
+  email: 'info@rorayhomebased.co.tz',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Makulu',
@@ -49,6 +55,22 @@ const jsonLd = {
   },
   priceRange: '$$',
   medicalSpecialty: 'Home Healthcare',
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:00',
+      closes: '18:00',
+    },
+  ],
+  availableService: [
+    'Skilled Home Nursing',
+    'Elderly Care',
+    'Post-Surgery Recovery',
+    'Physiotherapy Support',
+    'Palliative Care',
+    'Chronic Disease Management',
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -61,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body
-        className={`${montserrat.variable} ${openSans.variable} font-body bg-bone-cool text-ink overflow-x-hidden antialiased`}
+        className={`${cormorant.variable} ${openSans.variable} font-body bg-bone-cool text-ink overflow-x-hidden antialiased`}
       >
         <LanguageProvider>
           <TranslationsProvider>
@@ -70,6 +92,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <PageTransition>{children}</PageTransition>
             <Footer />
             <FloatingWhatsApp />
+            <Analytics />
+            <SpeedInsights />
           </TranslationsProvider>
         </LanguageProvider>
       </body>
