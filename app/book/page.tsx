@@ -5,7 +5,7 @@ import { SERVICES } from '@/lib/services';
 
 export const metadata = {
   title: 'Book a Consultation | Roray Homebased',
-  description: 'Schedule a clinical assessment with Dr. Gertrude Mande and the Roray team to discuss your home healthcare requirements.',
+  description: 'Schedule a clinical assessment with Dr. Getrude Mande and the Roray team to discuss your home healthcare requirements.',
 };
 
 export default function BookPage() {
@@ -70,7 +70,7 @@ export default function BookPage() {
                   <div>
                     <h4 className="font-display font-semibold text-white text-base">Licensed Clinical Staff</h4>
                     <p className="text-white/70 text-xs mt-1 leading-relaxed">
-                      Every provider is registered, vetted, and supervised by Dr. Gertrude Mande.
+                      Every provider is registered, vetted, and supervised by Dr. Getrude Mande.
                     </p>
                   </div>
                 </div>

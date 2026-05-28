@@ -12,8 +12,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { id: string } }) {
-  const service = SERVICES.find((s) => s.id === params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const service = SERVICES.find((s) => s.id === id);
   if (!service) return { title: 'Service Not Found' };
 
   return {
@@ -90,9 +91,10 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   },
 };
 
-export default function ServiceDetailPage({ params }: { params: { id: string } }) {
-  const service = SERVICES.find((s) => s.id === params.id);
-  const detail = SERVICE_DETAILS[params.id];
+export default async function ServiceDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const service = SERVICES.find((s) => s.id === id);
+  const detail = SERVICE_DETAILS[id];
 
   if (!service || !detail) {
     notFound();

@@ -5,23 +5,25 @@ import PageHero from '@/components/ui/PageHero';
 import Button from '@/components/ui/Button';
 import Eyebrow from '@/components/ui/Eyebrow';
 import RolesStrip from '@/components/sections/RolesStrip';
+import HowToBook from '@/components/sections/HowToBook';
+import WhatsAppBook from '@/components/sections/WhatsAppBook';
 
 export const metadata: Metadata = {
   title: 'Our Team | Roray Homebased Medical Services',
   description:
-    'Meet Dr. Gertrude Mande, Medical Director of Roray Homebased Medical Services in Dodoma, Tanzania.',
+    'Meet Dr. Getrude Mande, Medical Director of Roray Homebased Medical Services in Dodoma, Tanzania.',
 };
 
 export default function TeamPage() {
   return (
     <>
       <PageHero
-        title="Led by Dr. Gertrude Mande"
+        title="Led by Dr. Getrude Mande"
         description="Medical Director · Roray Homebased Medical Services Ltd"
         imagePath={IMAGES.clinical}
       />
 
-      {/* Dr. Gertrude Mande Feature */}
+      {/* Dr. Getrude Mande Feature */}
       <section className="bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12">
@@ -29,7 +31,7 @@ export default function TeamPage() {
             <div className="lg:col-span-5 relative min-h-[500px] lg:min-h-[700px]">
               <Image
                 src={IMAGES.drMande}
-                alt="Dr. Gertrude Mande, Medical Director, Roray Homebased Medical Services"
+                alt="Dr. Getrude Mande, Medical Director, Roray Homebased Medical Services"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -40,7 +42,7 @@ export default function TeamPage() {
             <div className="lg:col-span-7 bg-bone p-10 lg:p-16 flex flex-col justify-center">
               <Eyebrow>Medical Director</Eyebrow>
               <h2 className="font-display font-bold text-navy text-4xl lg:text-5xl mb-2">
-                Dr. Gertrude Mande
+                Dr. Getrude Mande
               </h2>
               <p className="text-roray-green font-display text-sm tracking-[0.2em] uppercase mb-8">
                 MD · MPH
@@ -48,7 +50,7 @@ export default function TeamPage() {
 
               <div className="space-y-4 mb-10">
                 <p className="text-ink-soft text-base leading-relaxed">
-                  Dr. Gertrude Mande founded Roray Homebased Medical Services Ltd with a deep passion for
+                  Dr. Getrude Mande founded Roray Homebased Medical Services Ltd with a deep passion for
                   improving access to compassionate and professional healthcare for patients who
                   need medical support in the comfort of their homes.
                 </p>
@@ -97,6 +99,10 @@ export default function TeamPage() {
 
       <RolesStrip />
 
+      <HowToBook />
+
+      <WhatsAppBook />
+
       {/* CTA */}
       <section className="py-20 bg-bone text-center">
         <div className="max-w-2xl mx-auto px-6">
@@ -104,7 +110,7 @@ export default function TeamPage() {
             Ready to Begin Care?
           </h2>
           <p className="text-ink-soft mb-8">
-            Book a consultation and Dr. Gertrude Mande&apos;s team will contact you within hours.
+            Book a consultation and Dr. Getrude Mande&apos;s team will contact you within hours.
           </p>
           <Button variant="primary" href="/book">
             Book a Home Visit

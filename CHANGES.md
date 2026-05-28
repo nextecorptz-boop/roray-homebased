@@ -10,7 +10,7 @@ The following modifications were made to prepare the Roray Homebased website for
 
 ## 2. Team Page Rebuild
 - Entirely rewrote `app/team/page.tsx`.
-- Shifted focus to a single-doctor presentation (Dr. Gertrude Mande).
+- Shifted focus to a single-doctor presentation (Dr. Getrude Mande).
 - Added asymmetric feature section and supporting professional network tiles.
 - Removed all placeholderスタッフ cards.
 

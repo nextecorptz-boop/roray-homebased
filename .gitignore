@@ -47,3 +47,5 @@ next-env.d.ts
 # temporary image asset directories
 new pics roray/
 New Pics/
+
+.vercel

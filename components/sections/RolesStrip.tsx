@@ -54,7 +54,7 @@ export default function RolesStrip() {
             variants={FADE_UP}
             className="text-white/70 text-base leading-relaxed max-w-2xl mb-14"
           >
-            Dr. Gertrude Mande directs registered nurses, certified caregivers, and licensed
+            Dr. Getrude Mande directs registered nurses, certified caregivers, and licensed
             physiotherapists who deliver care under Roray clinical protocols.
           </motion.p>
         </motion.div>

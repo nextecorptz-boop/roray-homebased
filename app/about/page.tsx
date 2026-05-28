@@ -2,6 +2,8 @@ import PageHero from '@/components/ui/PageHero';
 import AboutPreview from '@/components/sections/AboutPreview';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import ProcessSteps from '@/components/sections/ProcessSteps';
+import TestimonialsGrid from '@/components/sections/TestimonialsGrid';
+import EmergencyBand from '@/components/sections/EmergencyBand';
 import { IMAGES } from '@/lib/images';
 
 export const metadata = {
@@ -20,6 +22,8 @@ export default function AboutPage() {
       <AboutPreview />
       <WhyChooseUs />
       <ProcessSteps />
+      <TestimonialsGrid />
+      <EmergencyBand />
     </>
   );
 }

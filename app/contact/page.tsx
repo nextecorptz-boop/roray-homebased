@@ -1,5 +1,7 @@
 import PageHero from '@/components/ui/PageHero';
 import ContactBlock from '@/components/sections/ContactBlock';
+import FAQ from '@/components/sections/FAQ';
+import EmergencyBand from '@/components/sections/EmergencyBand';
 import { IMAGES } from '@/lib/images';
 
 export const metadata = {
@@ -16,6 +18,8 @@ export default function ContactPage() {
         imagePath={IMAGES.examRoom}
       />
       <ContactBlock />
+      <FAQ />
+      <EmergencyBand />
     </>
   );
 }

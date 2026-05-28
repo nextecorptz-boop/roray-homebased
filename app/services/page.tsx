@@ -1,5 +1,7 @@
 import PageHero from '@/components/ui/PageHero';
 import ServicesGrid from '@/components/sections/ServicesGrid';
+import SymptomMatcher from '@/components/sections/SymptomMatcher';
+import WhatsAppBook from '@/components/sections/WhatsAppBook';
 import ContactBlock from '@/components/sections/ContactBlock';
 import { IMAGES } from '@/lib/images';
 
@@ -17,6 +19,8 @@ export default function ServicesPage() {
         imagePath={IMAGES.clinical}
       />
       <ServicesGrid />
+      <SymptomMatcher />
+      <WhatsAppBook />
       <ContactBlock />
     </>
   );

@@ -27,7 +27,7 @@ const FAQS = [
   },
   {
     q: 'Are your nurses qualified? / Je, wauguzi wenu wana sifa?',
-    a: 'All nurses and caregivers are licensed, registered, and vetted under the clinical direction of Dr. Gertrude Mande.',
+    a: 'All nurses and caregivers are licensed, registered, and vetted under the clinical direction of Dr. Getrude Mande.',
   },
   {
     q: 'Are services available on weekends? / Huduma zinapatikana wikendi?',

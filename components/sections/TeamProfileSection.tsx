@@ -42,7 +42,7 @@ export default function TeamProfileSection() {
               <div className="relative aspect-[4/5] w-full overflow-hidden no-radius">
                 <Image
                   src={IMAGES.drMande}
-                  alt="Dr. Gertrude Mande, Medical Director, Roray Homebased Medical Services"
+                  alt="Dr. Getrude Mande, Medical Director, Roray Homebased Medical Services"
                   fill
                   loading="lazy"
                   sizes="(max-width: 1024px) 100vw, 55vw"
@@ -60,7 +60,7 @@ export default function TeamProfileSection() {
               className="w-full lg:w-[45%] bg-bone flex flex-col justify-center px-8 py-12 lg:px-16 lg:py-20"
             >
               <h2 className="font-display font-bold text-4xl md:text-5xl text-navy-deep mb-3">
-                Dr. Gertrude Mande
+                Dr. Getrude Mande
               </h2>
               <p className="text-xl text-roray-green font-semibold mb-2">Medical Director</p>
               <p className="text-sm font-bold tracking-widest uppercase text-ink-muted mb-8">
@@ -71,7 +71,7 @@ export default function TeamProfileSection() {
 
               <div className="text-ink-soft leading-relaxed space-y-5 text-base mb-12">
                 <p>
-                  Dr. Gertrude Mande founded Roray Homebased Medical Services Ltd
+                  Dr. Getrude Mande founded Roray Homebased Medical Services Ltd
                   with a deep passion for improving access to compassionate and
                   professional healthcare for patients who need medical support in
                   the comfort of their homes. Throughout her medical experience,
