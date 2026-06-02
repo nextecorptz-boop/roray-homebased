@@ -39,14 +39,14 @@ export default function TeamProfileSection() {
               viewport={{ once: true, amount: 0.2 }}
               className="w-full lg:w-[55%]"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden no-radius">
+              <div className="relative aspect-[4/5] w-full overflow-hidden no-radius bg-gradient-to-b from-[#e8f5ee] to-[#f0faf4]">
                 <Image
                   src={IMAGES.drMande}
                   alt="Dr. Getrude Mande, Medical Director, Roray Homebased Medical Services"
                   fill
                   loading="lazy"
                   sizes="(max-width: 1024px) 100vw, 55vw"
-                  className="object-cover object-top"
+                  className="object-contain object-bottom"
                 />
               </div>
             </motion.div>

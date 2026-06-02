@@ -20,7 +20,7 @@ export const IMAGES = {
   nutritionCare: '/images/pexels-kampus-7551594.jpg',
   chronicCare: '/images/pexels-ai25studioai-7345459.jpg',
   careExplanation: '/images/pexels-ai25studioai-7345450.jpg',
-  drMande: '/images/dr-mande.jpg',
+  drMande: '/images/dr-mande-new.jpg',
 
   // New images (from Desktop new-pics)
   doctorExam: '/images/new-pics/pexels-ivan-s-4989149.jpg',

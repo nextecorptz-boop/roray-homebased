@@ -28,12 +28,12 @@ export default function TeamPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-12">
             {/* Image — 5/12 */}
-            <div className="lg:col-span-5 relative min-h-[500px] lg:min-h-[700px]">
+            <div className="lg:col-span-5 relative min-h-[500px] lg:min-h-[700px] bg-gradient-to-b from-[#e8f5ee] to-[#f0faf4]">
               <Image
                 src={IMAGES.drMande}
                 alt="Dr. Getrude Mande, Medical Director, Roray Homebased Medical Services"
                 fill
-                className="object-cover object-top"
+                className="object-contain object-bottom"
                 sizes="(max-width: 1024px) 100vw, 42vw"
               />
             </div>
